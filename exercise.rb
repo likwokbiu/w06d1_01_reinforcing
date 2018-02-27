@@ -36,14 +36,5 @@ ballots.each do |ballot|
   end
 end
 
-@highest_point = 0
-@highest_index = 0
-@point.each_index do |n|
-  puts "#{@name[n]} has #{@point[n]} points."
-  if @point[n] > @highest_point
-    @highest_point = @point[n]
-    @highest_index = n
-  end
-end
-
-puts "The winner is #{@name[@highest_index]}."
+n = @point.index(@point.max)
+puts "The winner is #{@name[n]}."
